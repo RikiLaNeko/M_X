@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barre de navigation */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Aligner les éléments à droite */
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+/* Logo à gauche */
+.logo-link {
+    text-decoration: none;
+    color: white;
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* Déplacer les boutons à droite */
+.main-nav {
+    margin-left: 10px;
+}
+
+/* Bouton pour afficher le panier */
+.cart-toggle-button {
+    margin-right: 10px;
+}
+
+/* Conteneur principal avec largeur maximale */
+main {
+    max-width: 1200px; /* Ajustez la valeur en fonction de vos besoins */
+    margin: 0 auto; /* Centrer le contenu */
+}
+
+/* Section vidéo */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-top: 25px;
+    height: 0;
+    text-align: center;
+    margin-top: 100px; /* Adjust margin-top as needed */
+}
+
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Style pour la vidéo */
+video {
+    width: 100%; /* Ajustez la largeur en fonction de vos besoins */
+    height: auto;
+    margin-top: 10px; /* Espacement entre le nom et la vidéo */
+}
+
+/* Animation pour la vidéo */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+video {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Liens sociaux */
+.social-links {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.social-links img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Logo du panier */
+.cart-logo {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Panier */
+#shopping-cart {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Masquer le panier par défaut */
+    bottom: 0;
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    box-shadow: -1px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease; /* Animation pour afficher/masquer le panier */
+    z-index: 1000;
+    right: -100%; /* Position hors de l'écran */
+}
+
+/* Afficher le panier en position visible */
+#shopping-cart.active {
+    right: 0;
+}
+
+/* Styles pour l'en-tête du panier */
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Style de la croix pour fermer le panier */
+.close-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    /* Mettre le style du footer ici (informations de copyright, etc.) */
+}
+
+/* Style pour la vidéo de preview */
+video.preview-video {
+    width: 100%; /* Ajustez la largeur en fonction de vos besoins */
+    max-width: 400px; /* Limite de la largeur */
+    height: auto;
+    margin-top: 0px; /* Espacement entre le nom et la vidéo */
+}

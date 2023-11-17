@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M_X Merch Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="src/m_x-logo.png">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="top-bar">
+        <!-- Logo à gauche -->
+        <a href="#" onclick="loadHomePage()" class="logo-link">
+            <img src="src/m_x-logo.png" alt="Logo" class="logo">
+        </a>
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" onclick="loadMerchandisePage()">Merch</a></li>
+            </ul>
+        </nav>
+        <!-- Bouton pour afficher le panier -->
+        <div class="cart-toggle-button">
+            <img src="src/cart-logo.png" alt="Cart" class="cart-logo" onclick="toggleCart()">
+        </div>
+    </div>
+</header>
+
+<!-- Content -->
+<main>
+    <!-- Espace pour afficher la vidéo YouTube -->
+    <div class="video-container">
+        <iframe width="100%" height="60%" src="https://www.youtube.com/embed/viiR7GJtYYo" frameborder="0" allowfullscreen></iframe>
+    </div>
+</main>
+
+<!-- Réseaux sociaux -->
+<div class="social-links">
+    <a href="https://twitter.com/m_xofficiel" target="_blank" title="@m_xofficiel">
+        <img src="src/Twitter.png" alt="Twitter">
+    </a>
+    <a href="https://www.instagram.com/m_xofficiel" target="_blank">
+        <img src="src/Instagram.png" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@m_xofficiel" target="_blank">
+        <img src="src/Tiktok.png" alt="TikTok">
+    </a>
+    <a href="https://www.snapchat.com/add/m_xofficiel" target="_blank">
+        <img src="src/Snapchat.png" alt="Snapchat" title="@m_xofficiel">
+    </a>
+</div>
+
+<!-- Footer -->
+<footer>
+    <!-- Mettre le contenu du footer ici (informations de copyright, etc.) -->
+</footer>
+
+<!-- Panier -->
+<aside id="shopping-cart">
+    <div class="cart-header">
+        <span>Panier</span>
+        <!-- Bouton pour fermer le panier -->
+        <img src="src/close-icon.png" alt="Close" class="close-icon" onclick="toggleCart()">
+    </div>
+    <div id="cart-items">
+        <!-- Afficher les articles du panier ici -->
+    </div>
+    <p>Total: <span id="cart-total">0</span> €</p>
+    <button onclick="checkoutWithPayPal()">Paiement</button>
+</aside>
+
+<!-- PayPal Script -->
+<script src="https://www.paypal.com/sdk/js?client-id=test&currency=EUR"></script>
+
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+</body>
+</html>
