@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barre de navigation */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Aligner les éléments à droite */
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+/* Logo à gauche */
+.logo-link {
+    text-decoration: none;
+    color: white;
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* Déplacer les boutons à droite */
+.main-nav {
+    margin-left: 10px;
+}
+
+/* Bouton pour afficher le panier */
+.cart-toggle-button {
+    margin-right: 10px;
+}
+
+/* Section vidéo */
+.video-container {
+    text-align: center;
+    margin-top: 200px;
+}
+
+/* Liens sociaux */
+.social-links {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Logo du panier */
+.cart-logo {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Panier */
+#shopping-cart {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Masquer le panier par défaut */
+    bottom: 0;
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    box-shadow: -1px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease; /* Animation pour afficher/masquer le panier */
+    z-index: 1000;
+    right: -100%; /* Position hors de l'écran */
+}
+
+/* Afficher le panier en position visible */
+#shopping-cart.active {
+    right: 0;
+}
+
+/* Styles pour l'en-tête du panier */
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Style de la croix pour fermer le panier */
+.close-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    /* Mettre le style du footer ici (informations de copyright, etc.) */
+}
