@@ -1,8 +1,6 @@
 // Exemple de données de merch (vous pouvez remplacer cela par une base de données en backend)
 const merchItems = [
-    { id: 1, name: "T-shirt M_X", price: 20 },
-    { id: 2, name: "Album M_X", price: 15 },
-    { id: 3, name: "Casquette M_X", price: 10 },
+    { id: 1, name: "Album M_X", price: 11.99 },
     // Ajoutez d'autres articles ici
 ];
 
@@ -19,8 +17,11 @@ function displayMerchandise() {
         const itemElement = document.createElement("div");
         itemElement.innerHTML = `
             <h3>${item.name}</h3>
-            <!-- Ajout d'une éventuelle image -->
-            <img src="path-to-merch-image-${item.id}.png" alt="${item.name}">
+            <!-- Ajout de la vidéo en dessous du nom avec la classe preview-video -->
+            <video class="preview-video" controls loop autoplay>
+                <source src="src/CD_PREVIEW.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <p>Prix: ${item.price} €</p>
             <label for="quantity-${item.id}">Quantité:</label>
             <select id="quantity-${item.id}">
@@ -47,6 +48,18 @@ function toggleCart() {
     const shoppingCart = document.getElementById("shopping-cart");
     shoppingCart.classList.toggle("active");
 }
+
+// Appel à la fonction pour charger la page d'accueil au chargement de la page
+window.onload = function () {
+    // Charger la page d'accueil ou une autre page par défaut
+    loadHomePage();
+
+    // Vous pouvez également lancer la lecture de la vidéo ici si vous le souhaitez
+    const video = document.querySelector('video');
+    if (video) {
+        video.play();
+    }
+};
 
 // Fonction pour charger le contenu de la page Accueil
 function loadHomePage() {
